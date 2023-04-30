@@ -2,7 +2,7 @@
 import './App.css';
 import React from 'react';
 
-// var ipAddress = "";
+var ipAddress = "";
 
 function Mypage () {
   function handleClickB1() {
@@ -10,7 +10,7 @@ function Mypage () {
           .then((response) => response.json())
           .then((data) => {
             alert(JSON.stringify(data));
-            // ipAddress = data['ip'];
+            ipAddress = data['ip'];
           }) 
           .catch((err) => {
             console.log(err.message);
@@ -18,10 +18,10 @@ function Mypage () {
   }  
 
   function handleClickB2() {
-    fetch('https://ipapi.co/8.8.8.8/json/')
+    fetch('https://ipapi.co/' + ipAddress + '/json/')
       .then(function(response) {
       response.json().then(jsonData => {
-      console.log(jsonData);
+      alert(JSON.stringify.jsonData);
     });
   })
   .catch(function(error) {
