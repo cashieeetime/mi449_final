@@ -5,20 +5,15 @@ import ReactDOM from 'react-dom/client';
 
 function Button1() {
   function handleClick() {
-    const ipButton = () => {
-      const [ip, setIP] = useState([]);
-      useEffect(() => {
-          fetch('https://api.ipify.org?format=json')
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-              setIP(data);
-            })
-            .catch((err) => {
-              console.log(err.message);
-            }); 
-          }
-    }, []);
+    fetch('https://api.ipify.org?format=json')
+         .then((response) => response.json())
+         .then((data) => {
+            console.log(data);
+            setPosts(data);
+         })
+         .catch((err) => {
+            console.log(err.message);
+         });
   }
 
   return (
