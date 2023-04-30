@@ -3,25 +3,30 @@ import React from 'react';
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
+
 function MyForm() {
-  const [name, setName] = useState("");
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`The name you entered was: ${name}`)
-  }
+  const [ip, setIP] = useState("");
+  const [city, setCity] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
 
-        <form onSubmit={handleSubmit}>
-          <label>What song are you looking for?: <br></br>
+        <form>
+          <label>What's my IP address? : <br></br>
             <input
-              type="text" 
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              type="button" 
+              value={ip}
+              onChange={(e) => setIP(e.target.value)}
             />
           </label><br></br>
-          <input type="submit" />
+          <label>What's my city? : <br></br>
+            <input
+              type="button" 
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </label><br></br>
         </form>
 
       </header>
@@ -31,6 +36,7 @@ function MyForm() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
+
 
 function App() {
   return MyForm()
