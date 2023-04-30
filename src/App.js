@@ -3,8 +3,8 @@ import React from 'react';
 
 function Button1() {
   function handleClick() {
-    fetch('https://api.ipify.org')
-          // .then((response) => response.json())
+    fetch('https://api.ipify.org?format=json')
+          .then((response) => response.json())
           .then((data) => {
             alert(JSON.stringify(data));
           }) 
