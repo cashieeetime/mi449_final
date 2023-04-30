@@ -11,7 +11,7 @@ function Mypage () {
     <button onClick="handleClickB1()">Try it</button>
     <script>
     function handleClickB1 () {
-      document.getElementById("MyText").value = "Johnny Bravo"; 
+      document.getElementById("MyText").value = "Johnny Bravo"
     }
     </script>
   </div>
