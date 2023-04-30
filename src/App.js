@@ -13,19 +13,18 @@ function MyForm() {
     <div className="App">
       <header className="App-header">
 
+        <form onSubmit={handleSubmit}>
+          <label>What song are you looking for?: <br></br>
+            <input
+              type="text" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label><br></br>
+          <input type="submit" />
+        </form>
+
       </header>
-
-      <form onSubmit={handleSubmit}>
-        <label>What song are you looking for?: <br></br>
-          <input
-            type="text" 
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label><br></br>
-        <input type="submit" />
-      </form>
-
     </div>
   )
 }
