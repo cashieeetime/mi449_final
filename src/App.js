@@ -19,6 +19,7 @@ function Mypage () {
   }  
 
   function handleClickB2() {
+    var mycity = "";
     fetch('https://ipapi.co/' + ipAddress + '/json/')
       .then(function(response) {
       response.json().then(jsonData => {
