@@ -2,7 +2,7 @@
 import './App.css';
 import React from 'react';
 
-var ipAddress = "";
+// var ipAddress = "";
 
 function Button1() {
   function handleClick() {
@@ -10,7 +10,7 @@ function Button1() {
           .then((response) => response.json())
           .then((data) => {
             alert(JSON.stringify(data));
-            ipAddress = data['ip'];
+            // ipAddress = data['ip'];
           }) 
           .catch((err) => {
             console.log(err.message);
@@ -30,7 +30,7 @@ function Button1() {
 
 function Button2() {
   function handleClick() {
-    fetch('https://geoip.maxmind.com/geoip/v2.1/city/99.6.61.195\?use-downloadable-db=1\&demo=1\&lang=en', {headers: {Authentication: 'Bearer v2.local.zfVRoOkNURXQhUD4CyzJLldEiDvU1LTwOoEMw42J9jee3UR7ch0LAtEbJs27Weub9GgkXe839l8P36Un-Eh7rYajXXOOPpnRqMricl2Bhq_ExjzU7yWu35OJZwDJ-tlp3N0tj3KGBJx2frBDsAgxw0Ybmfh3U0D8yJvVKDJiMXXOeshtaQmsQX6mIvFru3yZE0oslqsojFEq50hh'}})
+    fetch('https://geoip.maxmind.com/geoip/v2.1/city/99.6.61.195?use-downloadable-db=1&demo=1&lang=en', {headers: {Authentication: 'Bearer v2.local.zfVRoOkNURXQhUD4CyzJLldEiDvU1LTwOoEMw42J9jee3UR7ch0LAtEbJs27Weub9GgkXe839l8P36Un-Eh7rYajXXOOPpnRqMricl2Bhq_ExjzU7yWu35OJZwDJ-tlp3N0tj3KGBJx2frBDsAgxw0Ybmfh3U0D8yJvVKDJiMXXOeshtaQmsQX6mIvFru3yZE0oslqsojFEq50hh'}})
           .then((response) => response.json())
           .then((data) => {
             // data = data[ipAddress[5]];
