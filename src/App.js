@@ -4,14 +4,14 @@ import React from 'react';
 
 function Button1() {
   function handleClick() {
-    fetch('https://api.ipify.org?format=json')
-         .then((response) => response.json())
-         .then((data) => {
+    fetch('https://api.ipify.org')
+          // .then((response) => response.json())
+          .then((data) => {
             alert(data);
-         })
-         .catch((err) => {
+          })
+          .catch((err) => {
             console.log(err.message);
-         });
+          });
   }
 
   return (
