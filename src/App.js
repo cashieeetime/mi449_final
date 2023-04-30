@@ -37,7 +37,7 @@ function Mypage () {
         <button onClick={handleClickB1}>
           What's my IP address?
         </button>
-        Name: <input type="text" id="MyIP" value="ipAddress"></input>
+        Name: <input type="text" id="MyIP" value="ipAddress" text-black></input>
         <button onClick={handleClickB2}>
           What's my City?
         </button>
