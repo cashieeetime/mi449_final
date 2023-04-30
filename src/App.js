@@ -21,7 +21,7 @@ function Mypage () {
     fetch('https://ipapi.co/' + ipAddress + '/json/')
       .then(function(response) {
       response.json().then(jsonData => {
-      alert(JSON.stringify(jsonData['city'] + ", " + jsonData['state']));
+      alert(JSON.stringify(jsonData['city'] + ", " + jsonData['region']));
     });
   })
   .catch(function(error) {
