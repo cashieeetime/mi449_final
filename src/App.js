@@ -7,7 +7,7 @@ function Button1() {
     fetch('https://api.ipify.org?format=json')
           .then((response) => response.json())
           .then((data) => {
-            this.refs.ipAddress.getInputNode().value = (JSON.stringify(data));
+            alert(JSON.stringify(data));
           }) 
           .catch((err) => {
             console.log(err.message);
@@ -20,7 +20,7 @@ function Button1() {
         <button onClick={handleClick}>
           What's my IP address?
         </button>
-        <TextField ref="ipAddress"/>
+        
 
       </header>
     </div>
