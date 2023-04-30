@@ -13,20 +13,9 @@ function MyForm() {
       <header className="App-header">
 
         <form>
-          <label>What's my IP address? : <br></br>
-            <input
-              type="button" 
-              value={ip}
-              onChange={(e) => setIP(e.target.value)}
-            />
-          </label><br></br>
-          <label>What's my city? : <br></br>
-            <input
-              type="button" 
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-            />
-          </label><br></br>
+          <button>What's my IP address?</button><br></br>
+          <button>What's my city?</button><br></br>
+          
         </form>
 
       </header>
