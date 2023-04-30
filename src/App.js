@@ -5,28 +5,19 @@ import React from 'react';
 var ipAddress = "";
 
 function Mypage () {
-  <div>
-    Name: <input type="text" id="MyText" value="Mickey"></input>
-    <p>Click the button to change the value of the text field.</p>
-    <button onClick="handleClickB1()">Try it</button>
-    <script>
-    function handleClickB1 () {
-      document.getElementById("MyText").value = "Johnny Bravo"
-    }
-    </script>
-  </div>
-
-  //function handleClickB1() {
-    //fetch('https://api.ipify.org?format=json')
-          //.then((response) => response.json())
-          //.then((data) => {
-            //alert(JSON.stringify(data));
-            //ipAddress = data['ip'];
-          //}) 
-          //.catch((err) => {
-            //console.log(err.message);
-          //});
-  //}  
+  
+  function handleClickB1() {
+    fetch('https://api.ipify.org?format=json')
+      .then((response) => response.json())
+      .then((data) => {
+      alert(JSON.stringify(data));
+      ipAddress = data['ip'];
+      document.getElementById("MyIP").value = ipAddress
+      }) 
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }  
 
   function handleClickB2() {
     fetch('https://ipapi.co/' + ipAddress + '/json/')
@@ -35,9 +26,9 @@ function Mypage () {
       alert(JSON.stringify(jsonData['city'] + ", " + jsonData['region']));
     });
   })
-  .catch(function(error) {
-  console.log(error)
-  });
+    .catch(function(error) {
+    console.log(error)
+    });
   }
 
   return (
@@ -46,6 +37,7 @@ function Mypage () {
         <button onClick={handleClickB1}>
           What's my IP address?
         </button>
+        Name: <input type="text" id="MyIP" value="ipAddress"></input>
         <button onClick={handleClickB2}>
           What's my City?
         </button>
