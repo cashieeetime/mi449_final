@@ -33,7 +33,7 @@ function Button2() {
     fetch('https://geoip.maxmind.com/geoip/v2.1/city/99.6.61.195\?use-downloadable-db=1\&demo=1\&lang=en')
           .then((response) => response.json())
           .then((data) => {
-            data = data[ipAddress[city]];
+            data = data[ipAddress[5]];
             alert(JSON.stringify(data));
           }) 
           .catch((err) => {
