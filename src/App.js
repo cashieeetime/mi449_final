@@ -21,7 +21,7 @@ function Mypage () {
     fetch('https://ipapi.co/' + ipAddress + '/json/')
       .then(function(response) {
       response.json().then(jsonData => {
-      alert(JSON.stringify.jsonData);
+      alert(JSON.stringify(jsonData));
     });
   })
   .catch(function(error) {
