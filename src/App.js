@@ -6,23 +6,18 @@ import ReactDOM from 'react-dom/client';
 function MyForm() {
   const [name, setName] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`The name you entered was: ${name}`)
-  }
-
   return (
     <div className="App">
       <header className="App-header">
 
-        <form onSubmit={handleSubmit}>
-          <label>What song are you looking for?: 
+        <form>
+          <label>What song are you looking for?: <br></br>
             <input
               type="text" 
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-          </label>
+          </label><br></br>
           <input type="submit" />
         </form>
 
