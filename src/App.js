@@ -1,12 +1,13 @@
 import './App.css';
 import React from 'react';
 
+
 function Button1() {
   function handleClick() {
     fetch('https://api.ipify.org?format=json')
          .then((response) => response.json())
          .then((data) => {
-            console.log(data);
+            alert(data);
          })
          .catch((err) => {
             console.log(err.message);
