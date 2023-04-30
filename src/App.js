@@ -2,13 +2,15 @@
 import './App.css';
 import React from 'react';
 
+const ipAddress = 0;
+
 function Button1() {
   function handleClick() {
     fetch('https://api.ipify.org?format=json')
           .then((response) => response.json())
           .then((data) => {
             alert(JSON.stringify(data));
-            const ipAddress = data;
+            ipAddress = data[1];
           }) 
           .catch((err) => {
             console.log(err.message);
@@ -31,7 +33,7 @@ function Button2() {
     fetch('https://geoip.maxmind.com/geoip/v2.1/city/99.6.61.195\?use-downloadable-db=1\&demo=1\&lang=en')
           .then((response) => response.json())
           .then((data) => {
-            ip = ipAddress[1];
+            data = data[ipAddress[city]];
             alert(JSON.stringify(data));
           }) 
           .catch((err) => {
