@@ -1,9 +1,23 @@
 import './App.css';
 import React from 'react';
+import { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 
 function Button1() {
   function handleClick() {
-    alert('You clicked me!');
+    const ipButton = () => {
+      const [posts, setPosts] = useState([]);
+      useEffect(() => {
+         fetch('https://api.ipify.org?format=json')
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              setPosts(data);
+            })
+            .catch((err) => {
+              console.log(err.message);
+            });
+      }, []);
   }
 
   return (
