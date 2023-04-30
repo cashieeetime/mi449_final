@@ -14,7 +14,15 @@ function Button1() {
 }
 
 function App() {
-  return Button1()
+  return (
+    <div className="App">
+      <header className="App-header">
+
+        Button1()
+
+      </header>
+    </div>
+  )
 } 
 
 export default App;
