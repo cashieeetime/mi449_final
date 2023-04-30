@@ -35,11 +35,11 @@ function Mypage () {
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={handleClickB1} class="border-solid rounded">
+        <button onClick={handleClickB1} class="hover:border-solid rounded">
           What's my IP address?
         </button><br></br>
         <input type="text" id="MyIP" class="text-black"></input><br></br>
-        <button onClick={handleClickB2} class="border-solid rounded">
+        <button onClick={handleClickB2} class="hover:border-solid rounded">
           What's my City?
         </button><br></br>
         <input type="text" id="MyCity" class="text-black"></input>
