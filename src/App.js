@@ -5,17 +5,28 @@ import React from 'react';
 var ipAddress = "";
 
 function Mypage () {
-  function handleClickB1() {
-    fetch('https://api.ipify.org?format=json')
-          .then((response) => response.json())
-          .then((data) => {
-            alert(JSON.stringify(data));
-            ipAddress = data['ip'];
-          }) 
-          .catch((err) => {
-            console.log(err.message);
-          });
-  }  
+  <div>
+    Name: <input type="text" id="MyText" value="Mickey"></input>
+    <p>Click the button to change the value of the text field.</p>
+    <button onClick="handleClickB1()">Try it</button>
+    <script>
+    function handleClickB1 () {
+      document.getElementById("MyText").value = "Johnny Bravo"; 
+    }
+    </script>
+  </div>
+
+  //function handleClickB1() {
+    //fetch('https://api.ipify.org?format=json')
+          //.then((response) => response.json())
+          //.then((data) => {
+            //alert(JSON.stringify(data));
+            //ipAddress = data['ip'];
+          //}) 
+          //.catch((err) => {
+            //console.log(err.message);
+          //});
+  //}  
 
   function handleClickB2() {
     fetch('https://ipapi.co/' + ipAddress + '/json/')
