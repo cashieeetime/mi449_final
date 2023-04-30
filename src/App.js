@@ -6,11 +6,16 @@ import ReactDOM from 'react-dom/client';
 function MyForm() {
   const [name, setName] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`The name you entered was: ${name}`)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>What song are you looking for?: 
             <input
               type="text" 
@@ -20,7 +25,7 @@ function MyForm() {
           </label>
           <input type="submit" />
         </form>
-        
+
       </header>
     </div>
   )
