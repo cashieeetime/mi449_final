@@ -10,7 +10,6 @@ function Mypage () {
     fetch('https://api.ipify.org?format=json')
       .then((response) => response.json())
       .then((data) => {
-      alert(JSON.stringify(data));
       ipAddress = data['ip'];
       document.getElementById("MyIP").value = ipAddress
       }) 
@@ -23,7 +22,8 @@ function Mypage () {
     fetch('https://ipapi.co/' + ipAddress + '/json/')
       .then(function(response) {
       response.json().then(jsonData => {
-      alert(JSON.stringify(jsonData['city'] + ", " + jsonData['region']));
+      mycity = (JSON.stringify(jsonData['city'] + ", " + jsonData['region']));
+      document.getElementById("MyCity").value = mycity
     });
   })
     .catch(function(error) {
@@ -37,10 +37,11 @@ function Mypage () {
         <button onClick={handleClickB1}>
           What's my IP address?
         </button>
-        Name: <input type="text" id="MyIP" value="ipAddress" class="text-black"></input>
+        <input type="text" id="MyIP" class="text-black"></input><br></br>
         <button onClick={handleClickB2}>
           What's my City?
         </button>
+        <input type="text" id="MyCity" class="text-black"></input>
       </header>
     </div>
   )
