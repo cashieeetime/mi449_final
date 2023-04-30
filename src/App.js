@@ -1,7 +1,5 @@
 import './App.css';
 import React from 'react';
-import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 
 function Button1() {
   function handleClick() {
