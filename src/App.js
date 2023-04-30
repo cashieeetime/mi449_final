@@ -23,7 +23,7 @@ function Mypage () {
     fetch('https://ipapi.co/' + ipAddress + '/json/')
       .then(function(response) {
       response.json().then(jsonData => {
-      mycity = (jsonData['city'] + ',' + jsonData['region']);
+      mycity = (jsonData['city'] + ', ' + jsonData['region']);
       document.getElementById("MyCity").value = mycity
     });
   })
