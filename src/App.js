@@ -10,7 +10,7 @@ function MyForm() {
     <div className="App">
       <header className="App-header">
         <form>
-          <label>Enter your name:
+          <label>What song are you looking for?: 
             <input
               type="text" 
               value={name}
