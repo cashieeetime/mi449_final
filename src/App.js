@@ -9,6 +9,7 @@ function MyForm() {
   return (
     <div className="App">
       <header className="App-header">
+
         <form>
           <label>What song are you looking for?: 
             <input
@@ -17,7 +18,9 @@ function MyForm() {
               onChange={(e) => setName(e.target.value)}
             />
           </label>
+          <input type="submit" />
         </form>
+        
       </header>
     </div>
   )
