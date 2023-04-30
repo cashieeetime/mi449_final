@@ -1,21 +1,20 @@
 import './App.css';
 import React from 'react';
 
-function MyForm() {
-  return (
-    <div className="App">
-      <header className="App-header">
+function Button1() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
 
-        <button>What's my IP address?</button><br></br>
-        <button>What's my city?</button><br></br>
-        
-      </header>
-    </div>
-  )
+  return (
+    <button onClick={handleClick}>
+      What's my IP address?
+    </button>
+  );
 }
 
 function App() {
-  return MyForm()
+  return Button1()
 } 
 
 export default App;
