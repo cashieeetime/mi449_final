@@ -7,22 +7,18 @@ function Button1() {
   }
 
   return (
-    <button onClick={handleClick}>
-      What's my IP address?
-    </button>
-  );
+    <div className="App">
+      <header className="App-header">
+        <button onClick={handleClick}>
+          What's my IP address?
+        </button>
+      </header>
+    </div>
+  )  
 }
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-
-        Button1()
-
-      </header>
-    </div>
-  )
+  return Button1()
 } 
 
 export default App;
