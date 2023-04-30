@@ -15,7 +15,7 @@ function MyForm() {
 
       </header>
 
-      <form handleSubmit >
+      <form onSubmit={handleSubmit}>
         <label>What song are you looking for?: <br></br>
           <input
             type="text" 
