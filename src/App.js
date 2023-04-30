@@ -6,7 +6,7 @@ function Button1() {
     fetch('https://api.ipify.org')
           // .then((response) => response.json())
           .then((data) => {
-            alert(data.statusText);
+            alert(JSON.stringify(data));
           }) 
           .catch((err) => {
             console.log(err.message);
