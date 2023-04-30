@@ -30,22 +30,15 @@ function Mypage () {
   }
 
   return (
-    <div>
-      <div className="App">
-        <header className="App-header">
-          <button onClick={handleClickB1}>
-            What's my IP address?
-          </button>
-        </header>
-      </div>
-
-      <div className="App">
-        <header className="App-header">
-          <button onClick={handleClickB2}>
-            What's my City?
-          </button>
-        </header>
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <button onClick={handleClickB1}>
+          What's my IP address?
+        </button>
+        <button onClick={handleClickB2}>
+          What's my City?
+        </button>
+      </header>
     </div>
   )
 }
